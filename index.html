@@ -63,19 +63,23 @@
             animation: scan 3s linear infinite;
         }
 
-        /* 캐릭터 스태츠 바 애니메이션 */
-        .stat-bar {
-            height: 6px;
-            border-radius: 3px;
-            background: rgba(168, 85, 247, 0.2);
-            overflow: hidden;
+        /* 자극적인 태그 스타일 */
+        .secret-tag {
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            color: #d8b4fe;
+            padding: 2px 10px;
+            border-radius: 99px;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.3s;
         }
 
-        .stat-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #a855f7, #f0abfc);
-            width: 0;
-            transition: width 1.5s ease-out;
+        .secret-tag:hover {
+            background: rgba(244, 114, 182, 0.2);
+            border-color: rgba(244, 114, 182, 0.5);
+            color: #fbcfe8;
+            box-shadow: 0 0 10px rgba(244, 114, 182, 0.4);
         }
     </style>
 </head>
@@ -84,21 +88,25 @@
 
     <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center transition-all duration-300 glass">
         <div class="text-2xl font-bold tracking-tighter text-purple-400">RE:BORN</div>
-        <button class="bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-full text-sm font-medium transition-all">앱
-            다운로드</button>
+        <a href="https://share.crack.wrtn.ai/222r7m" target="_blank" class="inline-block">
+            <button class="bg-purple-600 hover:bg-purple-500 px-5 py-2 rounded-full text-sm font-medium transition-all">
+                앱 다운로드
+            </button>
+        </a>
     </nav>
 
     <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-24 pb-12">
         <div data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="text-purple-300 text-lg md:text-xl mb-4 font-light tracking-widest uppercase">RE:BORN</h2>
+            <h2 class="text-purple-300 text-lg md:text-xl mb-4 font-light tracking-widest uppercase">RE:BORN Project
+            </h2>
             <h1 class="text-4xl md:text-7xl font-bold mb-6 leading-tight">
                 어려진 당신의<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-400">
-                    로망을 실현하세요!
-                </span>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-purple-400">로망을
+                    실현하세요!</span>
             </h1>
-            <p class="text-gray-400 max-w-md mx-auto mb-10 text-sm md:text-base leading-relaxed">
-                RE:BORN 다시 태어나서<br>XX와 XX를 하세용^^
+            <p class="text-gray-400 max-w-md mx-auto mb-10 text-sm md:text-base leading-relaxed italic">
+                "15년 동안 나를 벌레보듯 하던 그녀가... <br>내 목소리에 얼굴을 붉히기 시작했다."
             </p>
         </div>
 
@@ -131,64 +139,62 @@
     <div id="modal-overlay"
         class="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl hidden items-center justify-center p-4">
         <div id="modal-content"
-            class="glass w-full max-w-2xl rounded-[3rem] relative scale-95 opacity-0 transition-all duration-500 overflow-hidden">
+            class="glass w-full max-w-3xl rounded-[3rem] relative scale-95 opacity-0 transition-all duration-500 overflow-hidden flex flex-col md:flex-row shadow-2xl">
 
             <button id="close-modal-btn"
-                class="absolute top-8 right-8 z-50 text-white/50 hover:text-white transition-colors bg-white/10 p-2 rounded-full">
+                class="absolute top-6 right-6 z-50 text-white/50 hover:text-white transition-all bg-white/10 p-2 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
 
-            <div class="flex flex-col md:flex-row">
-                <div class="w-full md:w-1/2 h-80 md:h-auto relative overflow-hidden">
-                    <img src="1.png" alt="Character" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f051d] via-transparent to-transparent"></div>
+            <div class="w-full md:w-1/2 h-80 md:h-auto overflow-hidden">
+                <img src="1.png" alt="한소희" class="w-full h-full object-cover">
+            </div>
+
+            <div
+                class="p-8 md:p-10 w-full md:w-1/2 flex flex-col justify-center relative bg-gradient-to-br from-[#2d0b5a] via-[#0f051d] to-[#0f051d]">
+
+                <div class="absolute top-0 right-0 w-full h-full bg-purple-600/10 mix-blend-screen pointer-events-none">
                 </div>
 
-                <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <h4 class="text-purple-400 font-bold tracking-widest text-sm mb-2">CHARACTER PROFILE</h4>
-                    <h3 class="text-3xl font-bold mb-6 italic">RE:VIVE "Luna"</h3>
+                <div class="relative z-10">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="secret-tag">#동거녀</span>
+                        <span class="secret-tag">#소꿉친구</span>
+                        <span class="secret-tag">#혐관</span>
+                        <span class="secret-tag">#역키잡</span>
+                    </div>
 
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between text-xs mb-2 text-gray-400">
-                                <span>어려지는 정도 (Youthfulness)</span>
-                                <span>98%</span>
-                            </div>
-                            <div class="stat-bar">
-                                <div class="stat-progress" data-width="98%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs mb-2 text-gray-400">
-                                <span>몽환적 에너지 (Mystic Vibe)</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="stat-bar">
-                                <div class="stat-progress" data-width="85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between text-xs mb-2 text-gray-400">
-                                <span>자연스러움 (Natural)</span>
-                                <span>92%</span>
-                            </div>
-                            <div class="stat-bar">
-                                <div class="stat-progress" data-width="92%"></div>
+                    <h3 class="text-4xl font-bold mb-1 text-white">한소희</h3>
+                    <p class="text-purple-400 font-medium text-sm mb-6 uppercase tracking-wider">24세 / 대학생 / 165cm</p>
+
+                    <div class="relative mb-6 bg-white/5 p-4 rounded-2xl border-l-4 border-purple-500 backdrop-blur-md">
+                        <p class="text-gray-300 text-xs md:text-sm leading-relaxed italic">
+                            "당신이 '소년'으로 변해 무릎 위로 기어 올라간 순간, 그녀의 눈동자는 위험한 소유욕으로 번들거리기 시작합니다."
+                        </p>
+                    </div>
+
+                    <div class="space-y-3 text-sm mb-8">
+                        <div class="flex items-start">
+                            <span class="text-purple-400 font-bold w-16 flex-shrink-0">성향</span>
+                            <div class="flex flex-col text-gray-300">
+                                <span>완벽주의자, 냉소적 현실주의자</span>
+                                <div class="flex gap-2 mt-1 font-semibold">
+                                    <span class="text-pink-400 underline decoration-pink-500/30">#쇼타콘</span>
+                                    <span class="text-blue-400 underline decoration-blue-500/30">#이중인격</span>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <p class="mt-8 text-sm text-gray-400 leading-relaxed">
-                        루나는 시간을 되돌리는 에너지가 가장 강력한 캐릭터입니다. 당신의 고유한 분위기를 유지하면서 가장 맑았던 시절의 빛을 찾아줍니다.
-                    </p>
-
-                    <button
-                        class="mt-10 w-full py-4 bg-purple-600 rounded-2xl font-bold hover:bg-purple-500 transition-all">
-                        이 스타일로 적용하기
-                    </button>
+                    <a href="https://share.crack.wrtn.ai/222r7m" class="block w-full">
+                        <button
+                            class="w-full py-4 bg-gradient-to-r from-purple-700 to-purple-500 rounded-xl font-bold hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all active:scale-95 text-center text-white">
+                            앱 다운로드
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -201,34 +207,25 @@
         var browser = browser || chrome;
         $(document).ready(function () {
             AOS.init({ duration: 800, once: true });
-
             const $modalOverlay = $('#modal-overlay');
             const $modalContent = $('#modal-content');
 
-            // 모달 열기
             $('#open-modal').on('click', function () {
                 $modalOverlay.fadeIn(400).css('display', 'flex');
                 setTimeout(() => {
                     $modalContent.addClass('scale-100 opacity-100').removeClass('scale-95 opacity-0');
-                    // 스태츠 바 애니메이션 실행
-                    $('.stat-progress').each(function () {
-                        $(this).css('width', $(this).data('width'));
-                    });
                 }, 50);
                 $('body').css('overflow', 'hidden');
             });
 
-            // 모달 닫기 기능 (X 버튼 및 배경 클릭)
             function closeModal() {
                 $modalContent.addClass('scale-95 opacity-0').removeClass('scale-100 opacity-100');
-                $('.stat-progress').css('width', '0'); // 바 초기화
                 setTimeout(() => {
                     $modalOverlay.fadeOut(400);
                     $('body').css('overflow', 'auto');
                 }, 300);
             }
 
-            // 수정된 부분: 정확한 ID 매칭으로 닫기 버튼 활성화
             $('#close-modal-btn').on('click', function (e) {
                 e.preventDefault();
                 closeModal();
